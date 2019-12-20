@@ -24,7 +24,7 @@ publish: gem
 	gem push *.gem 
 
 .make.protogen:
-	grpc_tools_ruby_protoc -I ../.. --ruby_out=./lib --grpc_out=./lib ../../classifier.proto
+	grpc_tools_ruby_protoc -I proto --ruby_out=./lib/testai_classifier --grpc_out=./lib/testai_classifier proto/classifier.proto
 	touch .make.protogen
 
 .make.gem:
